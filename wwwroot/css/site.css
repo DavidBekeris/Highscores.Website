@@ -1,0 +1,20 @@
+﻿
+/*Shared*/
+body {
+    /*width: 90%;*/
+    margin: 0 auto;
+}
+header h1 {
+    margin-top: 0px;
+    text-align: center;
+    border-style: solid;
+    background-color: lightgray;
+}
+
+
+/*Index*/
+.register-highscore{
+    display: block;
+    margin-left: 0px;
+    text-align: right;
+}

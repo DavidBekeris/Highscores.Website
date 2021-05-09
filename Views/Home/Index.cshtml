@@ -1,0 +1,26 @@
+﻿@model IEnumerable<GameCategory>
+
+@*@{
+    ViewData["Title"] = "Highscores";
+}*@
+
+<div>
+    <a asp-controller="AddHighscore" asp-action="Create">Register highscore</a>
+</div>
+
+<div class="game-highscores">
+        @foreach (var category in Model)
+        {
+            <a asp-route="games" asp-route-urlSlug="@category.UrlSlug">
+                <div class="game-card">
+                    <div>
+                        <span class="name">
+                            @category.Name
+                        </span>
+                    </div>
+                </div>
+            </a>
+        }
+</div>
+
+<partial name="_gameListPartial" />

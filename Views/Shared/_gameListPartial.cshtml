@@ -1,0 +1,17 @@
+﻿@model IEnumerable<GameCategory>
+
+
+<div class="game-highscores">
+    @foreach (var category in Model)
+    {
+        <a asp-route="games" asp-route-urlSlug="@category.UrlSlug">
+            <div class="game-card">
+                <div>
+                    <span class="name">
+                        @category.Name
+                    </span>
+                </div>
+            </div>
+        </a>
+    }
+</div>

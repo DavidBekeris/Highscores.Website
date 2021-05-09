@@ -1,0 +1,20 @@
+﻿@model IEnumerable<GameCategory>
+
+<div class="product-card-grid">
+    @foreach (var game in Model)
+    {
+        <a asp-route="gamesdetails" asp-route-urlSlug="@game.UrlSlug">
+            <div class="product-card">
+                <img src="@game.ImageUrl" alt="@game.Name" />
+                <div>
+                    <span class="name">
+                        @game.Name
+                    </span>
+                    <span class="price">
+                        @game.ReleaseYear
+                    </span>
+                </div>
+            </div>
+        </a>
+    }
+</div>
